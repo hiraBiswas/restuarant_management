@@ -52,7 +52,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/myOrder',
-        element:<MyOrder></MyOrder>
+        element:<PrivateRoute><MyOrder></MyOrder></PrivateRoute>,
+        loader: () => fetch('http://localhost:5200/order')
       },
 
       {

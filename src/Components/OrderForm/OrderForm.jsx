@@ -14,7 +14,7 @@ const OrderForm = () => {
     const { user, signIn, loading } = useContext(AuthContext);
     const foodDetails = useLoaderData();
     console.log(foodDetails)
-    const { _id, name, quantity, price } = foodDetails
+    const { _id,image, name, quantity,userName,origin, price } = foodDetails;
     const [selectedDate, setSelectedDate] = useState(null);
     const today = new Date();
     const minimumDate = addDays(today, 0);
@@ -29,7 +29,7 @@ const OrderForm = () => {
         const date = form.date.value;
         const buyerName = form.buyerName.value;
         const buyerEmail = form.buyerEmail.value;
-        const newOrder = { name, buyerName, buyerEmail, price,date,  quantity };
+        const newOrder = { name,image, buyerName, buyerEmail, price,date,userName,quantity };
         console.log(newOrder);
 
         fetch('http://localhost:5200/order', {
@@ -126,8 +126,6 @@ const OrderForm = () => {
                             </label>
                         </div>
                     </div>
-
-
 
 
                     <div className="flex justify-center">
