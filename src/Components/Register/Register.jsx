@@ -61,11 +61,8 @@ const Register = () => {
   
     return (
         <div className="bg-black py-5 shadow-drop">
-        <div className="flex container mx-auto">
-          <div className="hidden flex-1 lg:block" >
-           <img src="https://i.ibb.co/T0Qv5dL/man-3015061-1280-removebg-preview.png" alt="" />
-          </div>
-
+        <div className="flex max-w-2xl lg:max-w-3xl container mx-auto">
+         
 
           <div className="flex-1 py-5 " style={{backgroundImage: 'url(https://i.ibb.co/BPdvzDP/blob-scene-haikei-1.png)', backgroundRepeat: 'no-repeat', backgroundSize:'cover' }} >
            <h2 className="text-2xl font-bold text-white text-center   lg:text-4xl pt-3 ">Register Here !</h2>

@@ -1,5 +1,3 @@
-ul a.active{
+li a.active{
     text-decoration: underline;
-    color:  #FCDAB7;
-    background-color: #1E5F74;
 }

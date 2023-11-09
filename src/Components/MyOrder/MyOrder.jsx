@@ -32,7 +32,7 @@ const MyOrder = () => {
             method: 'DELETE',
         })
             .then(response => {
-                if (response.ok) {
+                if (response) {
                     const remainingData = orderData.filter(dataItem => dataItem._id !== itemId);
                     toast.success('Deleted Successfully')
                     setOrderData(remainingData);
@@ -74,7 +74,7 @@ const MyOrder = () => {
 
     
     return (
-       <div className=''>
+       <div className='container mx-auto'>
         <h1 className='font-bold text-center py-5 text-white lg:text-2xl'>My Order</h1>
          <DataTable  className='text-center'
         

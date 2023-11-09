@@ -4,8 +4,8 @@ const ReviewSection = () => {
     return (
         <div className="container mx-auto">
             <h1 className="text-center italic text-red-500 text-2xl mt-10 font-bold lg:text-4xl my-8 lg:my-12 ">Your Feedback, Our Inspiration</h1>
-            <div className="hero h-full lg:h-[600px]" style={{backgroundImage: 'url(https://i.ibb.co/86GrVxz/alex-haney-CAhj-Zm-Vk5-H4-unsplash-scaled.jpg) '}}>
-  <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero h-full lg:h-[700px]" style={{backgroundImage: 'url(https://i.ibb.co/86GrVxz/alex-haney-CAhj-Zm-Vk5-H4-unsplash-scaled.jpg) '}}>
+  <div className="hero-overlay bg-black bg-opacity-80"></div>
   <div className="flex flex-col ">
   <div className="ml-10  text-start text-white">
     <div className="container text-center max-w-xl mx-auto">

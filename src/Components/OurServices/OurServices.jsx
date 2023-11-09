@@ -10,7 +10,7 @@ const OurServices = () => {
             <div className="container mx-auto">
                 <h1 className="text-center italic text-red-500 text-2xl mt-10 font-bold lg:text-4xl lg:my-12 ">Our Services</h1>
                 <div className="hero h-full lg:h-[500px]" style={{backgroundImage: 'url(https://i.ibb.co/1dkhsWn/pexels-nataliya-vaitkevich-5792329.jpg) '}}>
-      <div className="hero-overlay bg-opacity-80"></div>
+      <div className="hero-overlay bg-black bg-opacity-80"></div>
       <div className='flex flex-col justify-center items-center lg:flex-row'>
 
         <div className='text-white font-medium flex-1 m-5'>
