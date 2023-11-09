@@ -20,6 +20,7 @@ import AddAFood from './Components/AddAFood/AddAFood.jsx';
 import SingleFood from './Components/SingleFood/SingleFood.jsx';
 import OrderForm from './Components/OrderForm/OrderForm.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import UpdateFood from './Components/UpdateFood/UpdateFood.jsx';
 
 const router = createBrowserRouter([
   {
@@ -58,7 +59,9 @@ const router = createBrowserRouter([
 
       {
         path: '/myAddedFood',
-        element:<MyAddedFood></MyAddedFood>
+        element:<PrivateRoute><MyAddedFood></MyAddedFood></PrivateRoute>,
+        loader: () => fetch('http://localhost:5200/food')
+
       },
 
       {
@@ -69,6 +72,12 @@ const router = createBrowserRouter([
       {
         path:'/food/:id',
         element: <SingleFood></SingleFood>,
+        loader: ({ params }) => fetch(`http://localhost:5200/food/${params.id}`)
+      },
+
+      {
+        path:'/update/:id',
+        element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5200/food/${params.id}`)
       },
 

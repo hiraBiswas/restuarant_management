@@ -75,12 +75,13 @@ const MyOrder = () => {
     
     return (
        <div className=''>
+        <h1 className='font-bold text-center py-5 text-white lg:text-2xl'>My Order</h1>
          <DataTable  className='text-center'
-        title="My Orders"
+        
         columns={columns}
         data={orderData.map(item => ({
             id: item.id,
-            image:<img className='h-16 w-16 lg:h-24 lg:w-24' src={item.image} alt="" />,
+            image:<img className='h-16 w-16 lg:h-24 lg:w-24' src={item.image} alt={item.name} />,
             name: item.name,
             price: item.price,
             date: item.date,
