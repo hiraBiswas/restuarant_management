@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -11,7 +12,7 @@ const Banner = () => {
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Treat Yourself with <span className="text-6xl italic text-red-600">TasteyTreat</span></h1>
       <p className="mb-5 text-gray-400">It's a delicious promise. At TasteyTreat, we believe that everyone deserves to enjoy life's simple pleasures, starting with their taste buds.</p>
-      <button className="btn  bg-red-600 drop-shadow text-white ">Get Started</button>
+      <Link to="/allFood"><button className="btn bg-red-600 drop-shadow text-white ">Get Started</button></Link>
     </div>
   </div>
 </div>
@@ -27,7 +28,7 @@ const Banner = () => {
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">The Best <span className="italic text-red-600">Tasting</span> Experience</h1>
       <p className="mb-5 text-gray-400">At every bite, our carefully crafted flavors and premium ingredients come together to create a symphony for your taste buds. </p>
-      <button className="btn bg-red-600 drop-shadow text-white ">Get Started</button>
+      <Link to="/allFood"><button className="btn bg-red-600 drop-shadow text-white ">Get Started</button></Link>
     </div>
   </div>
 </div>
@@ -44,7 +45,7 @@ const Banner = () => {
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Feels Like Home <br /> Tastes Like <span className="text-red-600 italic">Paradise </span></h1>
       <p className="mb-5 text-gray-400">When you savor our creations, it's as if you've found a little piece of paradise in every bite, making every meal a truly heartwarming experience.</p>
-      <button className="btn  bg-red-600 drop-shadow text-white ">Get Started</button>
+      <Link to="/allFood"><button className="btn bg-red-600 drop-shadow text-white ">Get Started</button></Link>
     </div>
   </div>
 </div>

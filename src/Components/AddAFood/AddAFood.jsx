@@ -21,7 +21,7 @@ const AddAFood = () => {
     const userEmail = user?.email || '';
     const newFood = { name, userName, userEmail, image, price, category, quantity, description, origin };
     console.log(newFood);
-
+    console.log(JSON.stringify(newFood));
     fetch('http://localhost:5200/food', {
       method: 'POST',
       headers: {
@@ -32,7 +32,7 @@ const AddAFood = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
-        if (data._id) {
+        if (data._id || data.insertedId) {
           toast.success('Food added successfully');
           form.reset();
         }

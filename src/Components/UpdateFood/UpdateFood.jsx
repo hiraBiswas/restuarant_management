@@ -8,10 +8,10 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const UpdateFood = () => {
     const {user, loading, signIn}= useContext(AuthContext)
-    const product = useLoaderData();
-    console.log(product);
+    const foodData = useLoaderData();
+    console.log(foodData);
     const { id } = useParams();
-    const { _id, name, category, quantity, origin, price, image, description } = product;
+    const { _id, name, category, quantity, origin, price, image, description } = foodData;
 
 
     const handleUpdateFood = (event) => {

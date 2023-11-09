@@ -21,6 +21,7 @@ import SingleFood from './Components/SingleFood/SingleFood.jsx';
 import OrderForm from './Components/OrderForm/OrderForm.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 import UpdateFood from './Components/UpdateFood/UpdateFood.jsx';
+import TopSellingFood from './Components/TopSellingFood/TopSellingFood.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,13 +29,16 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
+    
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
+      
       {
         path: '/allFood',
         element:<AllFood></AllFood>,
+       
         loader: () => fetch('http://localhost:5200/food')
 
       },
@@ -86,6 +90,13 @@ const router = createBrowserRouter([
         element: <PrivateRoute><OrderForm></OrderForm></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5200/food/${params.id}`)
       },
+
+      {
+        path: '/',
+        element:<TopSellingFood></TopSellingFood>,
+        loader: () => fetch('http://localhost:5200/top-selling-food')
+        
+      }
 
     ],
   },
