@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const AddAFood = () => {
-  const { user, signIn, Loading } = useContext(AuthContext)
+  const { user, signIn, loading } = useContext(AuthContext)
   console.log(user)
   const handleAddFood = (event) => {
     event.preventDefault();

@@ -1,6 +1,8 @@
 import Banner from "../Banner/Banner";
 import { useEffect, useState } from 'react';
 import TopSellingFood from "../TopSellingFood/TopSellingFood";
+import ReviewSection from "../ReviewSection/ReviewSection";
+import OurServices from "../OurServices/OurServices";
 
 
 
@@ -35,6 +37,8 @@ const Home = () => {
 
       ))}
    </div>
+   <OurServices></OurServices>
+   <ReviewSection></ReviewSection>
   </div>
     
 
