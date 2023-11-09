@@ -22,7 +22,7 @@ const AddAFood = () => {
     const newFood = { name, userName, userEmail, image, price, category, quantity, description, origin };
     console.log(newFood);
     console.log(JSON.stringify(newFood));
-    fetch('http://localhost:5200/food', {
+    fetch('https://restuarent-management-server.vercel.app/food', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

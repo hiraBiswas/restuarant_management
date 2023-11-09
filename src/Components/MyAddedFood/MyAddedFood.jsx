@@ -12,7 +12,7 @@ const MyAddedFood = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5200/food')
+        fetch('https://restuarent-management-server.vercel.app/food')
             .then(response => response.json())
             .then(data => {
                 const userAddedItems = data.filter(item => item.userEmail === user.email);
@@ -23,12 +23,16 @@ const MyAddedFood = () => {
             });
     }, []);
     return (
-        <div className="container mx-auto shadow-2xl mt-10 py-10 px-5 drop-shadow rounded-xl grid gap-12 grid-cols-1 lg:grid-cols-2"> 
-        {
-              addedData.map(data => (
-                  <MyAddedFoodCard key={data._id} data={data}></MyAddedFoodCard>
-              ))
-              }
+        <div className="container mx-auto">
+            {addedData.length > 0 ? (
+                <div className="shadow-2xl mt-10 py-10 px-5 drop-shadow rounded-xl grid gap-12 grid-cols-1 lg:grid-cols-2">
+                    {addedData.map(data => (
+                        <MyAddedFoodCard key={data._id} data={data}></MyAddedFoodCard>
+                    ))}
+                </div>
+            ) : (
+                <p className="text-center text-white text-3xl py-20 font-bold mt-8">No data added by you.</p>
+            )}
         </div>
     );
 };

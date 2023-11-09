@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         path: '/allFood',
         element:<AllFood></AllFood>,
        
-        loader: () => fetch('http://localhost:5200/food')
+        loader: () => fetch('https://restuarent-management-server.vercel.app/food')
 
       },
 
@@ -58,13 +58,13 @@ const router = createBrowserRouter([
       {
         path: '/myOrder',
         element:<PrivateRoute><MyOrder></MyOrder></PrivateRoute>,
-        loader: () => fetch('http://localhost:5200/order')
+        loader: () => fetch('https://restuarent-management-server.vercel.app/order')
       },
 
       {
         path: '/myAddedFood',
         element:<PrivateRoute><MyAddedFood></MyAddedFood></PrivateRoute>,
-        loader: () => fetch('http://localhost:5200/food')
+        loader: () => fetch('https://restuarent-management-server.vercel.app/food')
 
       },
 
@@ -76,25 +76,25 @@ const router = createBrowserRouter([
       {
         path:'/food/:id',
         element: <SingleFood></SingleFood>,
-        loader: ({ params }) => fetch(`http://localhost:5200/food/${params.id}`)
+        loader: ({ params }) => fetch(`https://restuarent-management-server.vercel.app/food/${params.id}`)
       },
 
       {
         path:'/update/:id',
         element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5200/food/${params.id}`)
+        loader: ({ params }) => fetch(`https://restuarent-management-server.vercel.app/food/${params.id}`)
       },
 
       {
         path:'/order/:id',
         element: <PrivateRoute><OrderForm></OrderForm></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5200/food/${params.id}`)
+        loader: ({ params }) => fetch(`https://restuarent-management-server.vercel.app/food/${params.id}`)
       },
 
       {
         path: '/',
         element:<TopSellingFood></TopSellingFood>,
-        loader: () => fetch('http://localhost:5200/top-selling-food')
+        loader: () => fetch('https://restuarent-management-server.vercel.app/top-selling-food')
         
       }
 

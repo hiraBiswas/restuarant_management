@@ -22,7 +22,7 @@ const MyAddedFoodCard = ({data}) => {
     
         console.log(updateFood);
     
-        fetch(`http://localhost:5200/food/${_id}`, {
+        fetch(`https://restuarent-management-server.vercel.app/food/${_id}`, {
           method: 'PATCH',
           headers: {
             'content-type': 'application/json',

@@ -13,7 +13,7 @@ const Home = () => {
     const [topSellingFood, setTopSellingFood] = useState([]);
     useEffect(() => {
        
-        fetch('http://localhost:5200/top-selling-food')
+        fetch('https://restuarent-management-server.vercel.app/top-selling-food')
           .then(response => response.json())
           .then(data => setTopSellingFood(data))
           .catch(error => console.error('Error fetching top-selling food:', error));

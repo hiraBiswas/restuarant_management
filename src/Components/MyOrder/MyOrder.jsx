@@ -14,7 +14,7 @@ const MyOrder = () => {
     console.log(user)
 
     useEffect(() => {
-        fetch('http://localhost:5200/order')
+        fetch('https://restuarent-management-server.vercel.app/order')
             .then(response => response.json())
             .then(data => {
                 const userOrderItems = data.filter(item => item.buyerEmail === user.email);
@@ -28,7 +28,7 @@ const MyOrder = () => {
 
 
     const handleDeleteItem = (itemId) => {
-        fetch(`http://localhost:5200/order/${itemId}`, {
+        fetch(`https://restuarent-management-server.vercel.app/order/${itemId}`, {
             method: 'DELETE',
         })
             .then(response => {

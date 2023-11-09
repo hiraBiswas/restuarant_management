@@ -32,7 +32,7 @@ const OrderForm = () => {
         const newOrder = { name,image, buyerName, buyerEmail, price,date,userName,quantity };
         console.log(newOrder);
 
-        fetch('http://localhost:5200/order', {
+        fetch('https://restuarent-management-server.vercel.app/order', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -74,7 +74,7 @@ const OrderForm = () => {
                                 <span className="label-text text-white">Quantity</span>
                             </label>
                             <label className="input-group">
-                                <input  type="number" name="quantity" placeholder="quantity" className="input input-bordered border-red-600 bg-black text-white w-full max-w-xs" />
+                                <input required type="number" name="quantity" placeholder="quantity" className="input input-bordered border-red-600 bg-black text-white w-full max-w-xs" />
                             </label>
                         </div>
                     </div>
@@ -96,6 +96,7 @@ const OrderForm = () => {
                             </label>
                             <label className="input-group">
                                 <DatePicker
+                                    required
                                     selected={selectedDate}
                                     onChange={(date) => setSelectedDate(date)}
                                     name="date"
