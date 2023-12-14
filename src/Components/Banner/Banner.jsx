@@ -6,7 +6,7 @@ const Banner = () => {
         <div>
             <div className="carousel h-[400px] w-full">
   <div id="slide1" className="carousel-item relative w-full">
-  <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/kqxHkrN/vegetables-set-left-black-slate.jpg)'}}>
+  <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/CBFxK3z/vegetables-set-left-black-slate.jpg)'}}>
   <div className="hero-overlay bg-black bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content lg:mr-96">
     <div className="max-w-md">
@@ -22,7 +22,7 @@ const Banner = () => {
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">
-  <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/chRtXh4/pexels-lumn-604969.jpg)'}}>
+  <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/ZcdKLg7/pexels-lumn-604969.jpg)'}}>
   <div className="hero-overlay bg-black bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
@@ -39,7 +39,7 @@ const Banner = () => {
   </div> 
 
   <div id="slide3" className="carousel-item relative w-full">
-  <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/BrMRq9C/roasted-pork-steak-dark-wooden-surface.jpg)'}}>
+  <div className="hero h-[400px]" style={{backgroundImage: 'url(https://i.ibb.co/q0Q3nYz/roasted-pork-steak-dark-wooden-surface.jpg)'}}>
   <div className="hero-overlay bg-black bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content ">
     <div className="max-w-md">

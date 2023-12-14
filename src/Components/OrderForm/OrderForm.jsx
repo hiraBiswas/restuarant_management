@@ -12,45 +12,70 @@ import { addDays } from 'date-fns';
 
 const OrderForm = () => {
     const { user, signIn, loading } = useContext(AuthContext);
+    console.log(user)
     const foodDetails = useLoaderData();
-    console.log(foodDetails)
-    const { _id,image, name, quantity,userName,origin, price } = foodDetails;
+ 
+    const { _id,image, name, quantity,userName,origin, price,userEmail  } = foodDetails;
+    console.log('quantity from food', quantity)
     const [selectedDate, setSelectedDate] = useState(null);
     const today = new Date();
     const minimumDate = addDays(today, 0);
-
+   
 
     const handleOrder = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
-        const quantity = form.quantity.value;
+        const orderQuantity = parseInt(form.orderQuantity.value, 10);
         const price = form.price.value;
         const date = form.date.value;
         const buyerName = form.buyerName.value;
         const buyerEmail = form.buyerEmail.value;
-        const newOrder = { name,image, buyerName, buyerEmail, price,date,userName,quantity };
-        console.log(newOrder);
+        const food_id=foodDetails._id;
+        const foodQuantity = parseInt(quantity, 10); 
 
-        fetch('https://restuarent-management-server.vercel.app/order', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(newOrder),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        if (data._id || data.insertedId) {
-          toast.success('Order is successfully placed');
-          form.reset();
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        toast.error('Failed to add food');
-      });
+        console.log('enterd quantity',orderQuantity)
+        console.log('food quantity', foodQuantity)
+
+        if (userEmail === user.email) {
+            toast.error("You can't add your own food items");
+            return;
+          }
+
+     if(foodQuantity===0){
+        toast.error('Food is not available')
+     }
+     else if (orderQuantity > foodQuantity) {
+    console.log('orderQuantity is large');
+    toast.error('Quantity is not available');
+    return;
+  } else {
+    console.log('quantity is larger');
+    const newOrder = { name,image, buyerName, buyerEmail, price,date,userName,orderQuantity,food_id };
+    console.log(newOrder);
+
+    fetch('https://restuarant-management-server-new.vercel.app/order', {
+  method: 'POST',
+  headers: {
+    'content-type': 'application/json',
+  },
+  body: JSON.stringify(newOrder),
+})
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data)
+    if (data._id || data.insertedId) {
+      toast.success('Order is successfully placed');
+      form.reset();
+    }
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    toast.error('Failed to add food');
+  });
+  }
+
+       
   };
 
     
@@ -74,7 +99,7 @@ const OrderForm = () => {
                                 <span className="label-text text-white">Quantity</span>
                             </label>
                             <label className="input-group">
-                                <input required type="number" name="quantity" placeholder="quantity" className="input input-bordered border-red-600 bg-black text-white w-full max-w-xs" />
+                                <input required type="number" name="orderQuantity" placeholder="quantity" className="input input-bordered border-red-600 bg-black text-white w-full max-w-xs" />
                             </label>
                         </div>
                     </div>

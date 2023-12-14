@@ -22,7 +22,7 @@ const MyAddedFoodCard = ({data}) => {
     
         console.log(updateFood);
     
-        fetch(`https://restuarent-management-server.vercel.app/food/${_id}`, {
+        fetch(`https://restuarant-management-server-new.vercel.app/food/${_id}`, {
           method: 'PATCH',
           headers: {
             'content-type': 'application/json',
@@ -39,8 +39,9 @@ const MyAddedFoodCard = ({data}) => {
         }
         
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-        <figure className="w-1/2"><img className="h-full" src={image} alt={name}/></figure>
+       <div>
+         <div className="card card-side bg-base-100 shadow-xl">
+        <figure className=""><img className="h-[200px] w-[220px]" src={image} alt={name}/></figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
           <p>Price : {price}</p>
@@ -49,6 +50,7 @@ const MyAddedFoodCard = ({data}) => {
     </div>
         </div>
       </div>
+       </div>
     );
 }
 

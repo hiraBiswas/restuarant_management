@@ -21,8 +21,8 @@ const SingleFood = () => {
              <h3 className="text-lg">Category : {category}</h3>
              <h3 className="text-lg">Price : {price}</h3>
              <h3 className="text-lg">Made By : {userName}</h3>
-             <h3 className="text-lg">Food Origin : {origin}</h3>
-             <Link to={`/order/${_id}`} ><button className="btn btn-outline mt-4  border-none drop-shadow bg-red-500 lg:px-16 text-white hover:text-red-600 hover:bg-white" >Order</button></Link>
+             <h3 className="text-lg mb-2">Food Origin : {origin}</h3>
+             <Link to={`/order/${_id}`} ><button className="btn btn-outline mt-4   border-none drop-shadow bg-red-500 lg:px-16 text-white hover:text-red-600 hover:bg-white" >Order</button></Link>
            
          </div>
         </div>

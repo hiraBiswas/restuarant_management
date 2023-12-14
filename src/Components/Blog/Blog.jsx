@@ -1,63 +1,39 @@
-
+import React from 'react';
 
 const Blog = () => {
     return (
-        <div className="container flex mx-auto ">
-            <div className="w-2/3 ">
-                <div >
-                    <img src="https://i.ibb.co/vQzz0TT/fried-rice-with-minced-pork-tomato-carrot-cucumber-plate.jpg" alt="" />
-                </div>
-                <div className="flex gap-8 items-center justify-between">
-                    <div className="w-2/3 text-gray-400 mx-5">
-                        <h1 className="text-bold text-2xl text-white">Ingredients:</h1>
-                        <p>2 cups cooked rice (preferably day-old rice)
-                            1 cup mixed vegetables (carrots, peas, corn, and diced bell peppers),
-                            1/2 cup diced onions,
-                            2 cloves garlic, minced
-                            2 eggs, beaten,
-                            3 tablespoons soy sauce,
-                            1 tablespoon oyster sauce,
-                            1 teaspoon sesame oil,
-                            2 green onions, chopped
-                            2 tablespoons vegetable oil for cooking,
-                            Salt and pepper to taste</p>
-                        <br />
-                        <h3 className="text-bold text-2xl text-white">Instruction:</h3>
-                        <p>
-                            In the lively wok theater, vegetable oil sizzles over medium-high heat, setting the stage for the aromatic duo of diced onions and minced garlic. As they waltz, beaten eggs make a dramatic entrance, swirling and scrambling until just set. The vegetable medley joins the ensemble, dancing to a crisp yet tender rhythm, paving the way for the grand entrance of cooked rice, artfully breaking free from clumps. The trio of soy sauce, oyster sauce, and sesame oil drizzles over the rice, creating a harmonious symphony of flavors. Stir-frying unites the cast, allowing the rice and vegetables to absorb the savory notes for 2-3 minutes. Seasoned with salt and pepper, this culinary performance concludes with a fresh flourish—chopped green onions—and is ready to take center stage as a delightful main course or a captivating side dish.</p>
+        <div className='container mx-auto mt-8'>
+            <div>
+                <h1 className='text-red-500 text-2xl font-semibold'>
+                What is One way data binding?
+                </h1>
+                <p className='text-white py-5'>
+                    One-way data binding is a concept in software development, particularly in the context of user interfaces, where the data flow is unidirectional, moving from the data source to the UI elements. In this paradigm, changes in the data source automatically update the corresponding UI components, but the reverse is not true—modifying the UI does not affect the underlying data.
 
-                    </div>
-                    <div className="w-1/3 mx-auto">
-                        <img className="h-40 w-40" src="https://i.ibb.co/9yQyTYC/milled-rice-black-bowl-black-cement-floor.jpg" alt="" />
-                        <img className="h-40 my-3 w-40" src="https://i.ibb.co/GVMJhfn/chicken-beef-cocktail-sausages.jpg" alt="" />
-                        <img className="h-40 w-40" src="https://i.ibb.co/3Mh2xR7/fresh-organic-various-tomatoes.jpg" alt="" />
-                    </div>
-                </div>
+This approach simplifies the management of state within an application by enforcing a clear and predictable flow of data. It is commonly associated with frameworks like React, Angular, and Vue.js. In one-way data binding, the application's logic and data are typically controlled by a central component or model, and changes to this model trigger updates in the UI elements that are bound to it.
 
+This unidirectional flow enhances code predictability and makes it easier to trace the source of changes in the application, contributing to better maintainability and a reduced likelihood of bugs related to inconsistent state.
+
+                </p>
             </div>
-            <div className="w-1/3 ">
-             <div className="mx-5">
-               <img className="h-60 w-full" src="https://i.ibb.co/s26X6S1/pexels-madjid-atmania-12285424.jpg" alt="" />
-               <h1 className="text-2xl font-medium text-white"><span className="text-red-500">Orange Flavour Cake- </span>Softest Cake You Ever Tested</h1>
-             </div>
 
-             <div className="mx-5 my-5">
-               <img className="h-60 w-full" src="https://i.ibb.co/RgP9MCw/pexels-photomix-company-96974.jpg" alt="" />
-               <h1 className="text-2xl font-medium text-white"><span className="text-red-500">Fresh Orange juice- </span>Clear All Your Exhaustion</h1>
-             </div>
 
-             <div className="mx-5">
-               <img className="h-60 w-full" src="https://i.ibb.co/Y7WkXyr/front-view-burger-stand.jpg" alt="" />
-               <h1 className="text-2xl font-medium text-white"><span className="text-red-500">Juicy, Tender, Cheesy Burger- </span>Take You To The Haven</h1>
-             </div>
-             <div>
+            <div>
+                <h1 className='text-red-500 text-2xl font-semibold'>
+                What is NPM in node.js?
+                </h1>
+                <p className='text-white py-5'>
+                NPM (Node Package Manager) is a tool for managing and sharing JavaScript code in Node.js projects. It simplifies package installation, dependency management, and script execution. Developers use NPM to install, update, and share libraries, and it plays a key role in maintaining project consistency by managing dependencies through the "node_modules" folder. Additionally, NPM allows for custom script definitions, version specification, and the global installation of packages. Overall, it enhances the development and collaboration process within the Node.js ecosystem.
 
-             </div>
-
-             <div>
-
-             </div>
+                </p>
             </div>
+
+            <div>
+                <h1 className='text-red-400 text-2xl font-semibold'>Different between Mongodb database vs mySQL database.</h1>
+                <p className='text-white'>MongoDB and MySQL represent two distinct approaches to database management. MongoDB is a NoSQL, document-oriented database that stores data in flexible, JSON-like BSON documents, offering schema flexibility and scalability for projects with dynamic requirements and large datasets. It is particularly well-suited for applications dealing with unstructured or semi-structured data, making it a popular choice in web development and big data scenarios. On the other hand, MySQL is a relational database management system (RDBMS) using structured query language (SQL) for organizing data into tables with predefined schemas. MySQL is characterized by its adherence to a fixed schema, making it suitable for applications where transactions and well-defined relationships between tables are critical. The choice between MongoDB and MySQL hinges on factors such as the nature of the data, scalability needs, and the project's specific requirements.</p>
+            </div>
+            
+            
         </div>
     );
 };

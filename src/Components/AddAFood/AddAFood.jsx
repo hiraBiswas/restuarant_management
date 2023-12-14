@@ -19,10 +19,12 @@ const AddAFood = () => {
     const description = form.description.value;
     const userName = user?.displayName || '';
     const userEmail = user?.email || '';
-    const newFood = { name, userName, userEmail, image, price, category, quantity, description, origin };
+    const orderCount=0;
+   
+    const newFood = { name, userName, userEmail, image, price, category, quantity, description, origin, orderCount };
     console.log(newFood);
     console.log(JSON.stringify(newFood));
-    fetch('https://restuarent-management-server.vercel.app/food', {
+    fetch('https://restuarant-management-server-new.vercel.app/food', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -42,7 +44,6 @@ const AddAFood = () => {
         toast.error('Failed to add food');
       });
   };
-
   return (
     <div className="bg-gray-800 p-12">
       <h2 className="text-3xl font-extrabold text-center py-5 text-white">Add a Food</h2>

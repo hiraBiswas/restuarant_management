@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         path: '/allFood',
         element:<AllFood></AllFood>,
        
-        loader: () => fetch('https://restuarent-management-server.vercel.app/food')
+        loader: () => fetch('https://restuarant-management-server-new.vercel.app/food')
 
       },
 
@@ -58,13 +58,13 @@ const router = createBrowserRouter([
       {
         path: '/myOrder',
         element:<PrivateRoute><MyOrder></MyOrder></PrivateRoute>,
-        loader: () => fetch('https://restuarent-management-server.vercel.app/order')
+        loader: () => fetch('https://restuarant-management-server-new.vercel.app/order')
       },
 
       {
         path: '/myAddedFood',
         element:<PrivateRoute><MyAddedFood></MyAddedFood></PrivateRoute>,
-        loader: () => fetch('https://restuarent-management-server.vercel.app/food')
+        loader: () => fetch('https://restuarant-management-server-new.vercel.app/food')
 
       },
 
@@ -76,30 +76,27 @@ const router = createBrowserRouter([
       {
         path:'/food/:id',
         element: <SingleFood></SingleFood>,
-        loader: ({ params }) => fetch(`https://restuarent-management-server.vercel.app/food/${params.id}`)
+        loader: ({ params }) => fetch(`https://restuarant-management-server-new.vercel.app/food/${params.id}`)
       },
 
       {
         path:'/update/:id',
         element: <PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://restuarent-management-server.vercel.app/food/${params.id}`)
+        loader: ({ params }) => fetch(`https://restuarant-management-server-new.vercel.app/food/${params.id}`)
       },
 
       {
         path:'/order/:id',
         element: <PrivateRoute><OrderForm></OrderForm></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://restuarent-management-server.vercel.app/food/${params.id}`)
+        loader: ({ params }) => fetch(`https://restuarant-management-server-new.vercel.app/food/${params.id}`)
       },
 
-      {
-        path: '/',
-        element:<TopSellingFood></TopSellingFood>,
-        loader: () => fetch('https://restuarent-management-server.vercel.app/top-selling-food')
-        
-      }
+      
 
     ],
   },
+
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

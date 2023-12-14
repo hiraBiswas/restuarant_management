@@ -6,8 +6,8 @@ const FoodCard = ({food}) => {
     console.log(name, image, category, price, quantity)
     return (
         <div>
-        <div className="card card-compact bg-gray-900 shadow-xl">
-<figure><img className="" src={image}/></figure>
+        <div className="card card-compact bg-black drop-shadow border shadow-xl">
+<figure className="h-[220px] w-full"><img className="h-[220px] w-full" src={image}/></figure>
 <div className="card-body text-white">
   <h2 className="card-title lg:text-xl">{name}</h2>
  <h4 className="text-start font-medium"> Category : {category}</h4>

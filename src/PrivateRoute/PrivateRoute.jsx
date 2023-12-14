@@ -6,14 +6,14 @@ const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
 
     if(loading) {
-        return <progress className="progress text-3xl w-56 text-white"></progress>
+        return <progress className="progress text-center text-6xl w-56 text-white"></progress>
     }
 
     if(user?.email){
         return children;
     }
 
-    return <Navigate to="/login" replace></Navigate>;
+    return <Navigate state={location.pathname} to="/login" replace></Navigate>;
 };
 
 export default PrivateRoute;

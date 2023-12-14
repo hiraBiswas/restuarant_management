@@ -4,6 +4,9 @@ import TopSellingFood from "../TopSellingFood/TopSellingFood";
 import ReviewSection from "../ReviewSection/ReviewSection";
 import OurServices from "../OurServices/OurServices";
 import { Link } from "react-router-dom";
+import ContactUs from "../ContactUs/ContactUs";
+import UpComing from "../UpComing/UpComing";
+
 
 
 
@@ -13,7 +16,7 @@ const Home = () => {
     const [topSellingFood, setTopSellingFood] = useState([]);
     useEffect(() => {
        
-        fetch('https://restuarent-management-server.vercel.app/top-selling-food')
+        fetch('https://restuarant-management-server-new.vercel.app/top-selling-food')
           .then(response => response.json())
           .then(data => setTopSellingFood(data))
           .catch(error => console.error('Error fetching top-selling food:', error));
@@ -38,8 +41,11 @@ const Home = () => {
         <Link to='/allFood'><button className="btn bg-red-500 text-white" >See All</button></Link>
     </div>
     </div>
+    
    <OurServices></OurServices>
+  <UpComing></UpComing>
    <ReviewSection></ReviewSection>
+   <ContactUs></ContactUs>
   </div>
     
 

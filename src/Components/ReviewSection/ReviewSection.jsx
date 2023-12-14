@@ -16,7 +16,7 @@ const ReviewSection = () => {
   </div>
 
   <div className="grid gap-8 mt-8 grid-cols-2 mx-3 md:grid-cols-2  lg:grid-cols-4">
-    <div className="bg-gray-900 drop-shadow p-3">
+    <div className=" border-red-600 border-[1px] drop-shadow p-3">
         <div className="flex justify-center">
         <img className="h-32 w-32 rounded-full py-3" src="https://i.ibb.co/6y1GzrM/images-4.jpg" alt="" />
         </div>
@@ -25,7 +25,7 @@ const ReviewSection = () => {
 
     </div>
 
-    <div className="bg-gray-900 drop-shadow p-3">
+    <div className=" border-red-600 border-[1px]  drop-shadow p-3">
         <div className="flex justify-center">
         <img className="h-32 w-32 rounded-full py-3" src="https://i.ibb.co/61y7jC6/collarbone-cut-with-soft-waves-1.jpg" alt="" />
         </div>
@@ -34,7 +34,7 @@ const ReviewSection = () => {
 
     </div>
 
-    <div className="bg-gray-900 drop-shadow p-3">
+    <div className=" border-red-600 border-[1px]  drop-shadow p-3">
         <div className="flex justify-center">
         <img className="h-32 w-32 rounded-full py-3" src="https://i.ibb.co/Br11Vkz/download-4.jpg" alt="" />
         </div>
@@ -43,7 +43,7 @@ const ReviewSection = () => {
 
     </div>
 
-    <div className="bg-gray-900 drop-shadow p-3">
+    <div className=" border-red-600 border-[1px]  drop-shadow p-3">
         <div className="flex justify-center">
         <img className="h-32 w-32 rounded-full py-3" src="https://i.ibb.co/WzvZcbC/images-3.jpg" alt="" />
         </div>
